@@ -21,6 +21,7 @@ module.exports = {
         loaders: [
             {
                 test: /\.jsx?$/,
+                exclude: /(node_modules|bower_components)/,
                 loader: 'babel-loader',
                 query: {
                     presets: [
@@ -39,4 +40,4 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
     ],
-}
+};
